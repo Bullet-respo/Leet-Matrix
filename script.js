@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // const URL = `https://leetcode-stats-api.herokuapp.com/ ${username}`;
 
             //FakeProxy gotton from https://cors-anywhere.herokuapp.com/corsdemo
-            const proxyURL = 'https://cors-anywhere.herokuapp.com/';
+            // const proxyURL = 'https://cors-anywhere.herokuapp.com/';
             const URL = `https://leetcode.com/graphql/`;
             const myheader = new Headers();
             myheader.append('content-type', 'application/json');
@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 // redirect:'follow'
             }
 
-            const response = await fetch(proxyURL+URL, requestOptions);
+            const response = await fetch(URL, requestOptions);
             if (!response.ok) {
                 throw new Error('Unable to fetch the User Details');
             }
